@@ -22,7 +22,8 @@ export default function WorkTracker() {
   const [date, setDate] = useState("");
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
-  const { data: session } = useSession();
+  const sessionData = useSession();
+  const session = sessionData?.data;
   const hourlyRate = 7;
 
   useEffect(() => {
